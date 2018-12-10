@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>ForeServlet</servlet-name>
+        <servlet-class>com.servlet.ForeServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ForeServlet</servlet-name>
+        <url-pattern>/foreServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.servlet.OrderServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/orderServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.servlet.UserServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>WorkServlet</servlet-name>
+        <servlet-class>com.servlet.WorkServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>WorkServlet</servlet-name>
+        <url-pattern>/workServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ContractServlet</servlet-name>
+        <servlet-class>com.servlet.ContractServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ContractServlet</servlet-name>
+        <url-pattern>/contractServlet</url-pattern>
+    </servlet-mapping>
+ 
+   
+    
+    <servlet>
+        <servlet-name>BusinessServlet</servlet-name>
+        <servlet-class>com.servlet.BusinessServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>BusinessServlet</servlet-name>
+        <url-pattern>/businessServlet</url-pattern>
+    </servlet-mapping>
+     
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.filter.EncodingFilter</filter-class>
+    </filter>
+ 
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>    
+    
+    <filter>
+        <filter-name>BackServletFilter</filter-name>
+        <filter-class>com.filter.BackServletFilter</filter-class>
+    </filter>
+ 
+    <filter-mapping>
+        <filter-name>BackServletFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>ForeAuthFilter</filter-name>
+        <filter-class>com.filter.ForeAuthFilter</filter-class>
+    </filter>
+ 
+    <filter-mapping>
+        <filter-name>ForeAuthFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>      
+
+    <filter>
+        <filter-name>ForeServletFilter</filter-name>
+        <filter-class>com.filter.ForeServletFilter</filter-class>
+    </filter>
+ 
+    <filter-mapping>
+        <filter-name>ForeServletFilter</filter-name>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>        
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+  
+        
+</web-app>
